@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Вопросы по сайту</title>
+<style>
+:root{--am:#d97706;--or:#f97316;--ink:#111827;--mut:#6b7280}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}
+a[href^="tel:"],a[href^="mailto:"]{-webkit-user-select:text!important;user-select:text!important}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.grad{background:linear-gradient(90deg,#d97706,#eab308,#f97316);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* шапка */
+header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);box-shadow:0 1px 12px rgba(0,0,0,.07)}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:10px;height:64px}
+.logo{font-size:1.35rem;font-weight:800;text-decoration:none;white-space:nowrap}
+nav{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+nav a{color:#374151;text-decoration:none;font-weight:500;font-size:.92rem}
+nav a:hover{color:var(--am)}
+nav a.on{color:var(--am)}
+.cta{background:linear-gradient(90deg,#f59e0b,#f97316);color:#fff;border-radius:999px;padding:8px 18px;font-size:14px;font-weight:700;text-decoration:none;white-space:nowrap}
+@media(max-width:760px){nav{gap:12px}nav a{font-size:.8rem}.logo{font-size:1.05rem}.cta{padding:7px 12px;font-size:12px}}
+/* герой страницы */
+.phero{padding:48px 0 40px;background:linear-gradient(180deg,#fffbeb,#fff);position:relative;overflow:hidden}
+.phero::before{content:"";position:absolute;inset:0;background:none}
+.phero .wrap{position:relative}
+.phero h1{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:12px}
+.phero p{color:var(--mut);font-size:1.1rem;max-width:640px}
+/* секции */
+section{padding:64px 0}
+section h2{font-size:clamp(1.6rem,3.4vw,2.3rem);margin-bottom:6px}
+.sub{color:var(--mut);margin-bottom:34px}
+.badge{display:inline-block;background:linear-gradient(90deg,#f59e0b,#f97316);color:#fff;border-radius:999px;padding:4px 14px;font-size:.8rem;font-weight:700;margin-bottom:14px}
+.card{background:#fff;border:1px solid #f3e8d0;border-radius:20px;padding:28px;box-shadow:0 8px 30px rgba(0,0,0,.05)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+@media(max-width:820px){.cols{grid-template-columns:1fr}}
+ul.tick{list-style:none;margin-top:12px}
+ul.tick li{padding:7px 0 7px 30px;position:relative;color:#374151}
+ul.tick li::before{content:"✓";position:absolute;left:0;top:7px;width:20px;height:20px;border-radius:50%;background:#dcfce7;color:#16a34a;font-size:.75rem;display:flex;align-items:center;justify-content:center}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:22px}
+.kpi{background:#fffbeb;border:1px solid #fde68a;border-radius:16px;padding:16px;text-align:center}
+.kpi b{display:block;font-size:1.5rem;background:linear-gradient(90deg,#d97706,#f97316);-webkit-background-clip:text;background-clip:text;color:transparent}
+.kpi span{font-size:.8rem;color:var(--mut)}
+.alt{background:linear-gradient(180deg,#fff,#fffbeb)}
+/* сравнение гидроциклонов */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:20px;overflow:hidden;box-shadow:0 12px 40px rgba(0,0,0,.08)}
+@media(max-width:820px){.vs{grid-template-columns:1fr}}
+.vs>div{padding:28px}
+.vs .old{background:#f9fafb}
+.vs .new{background:linear-gradient(135deg,#f59e0b,#f97316);color:#fff}
+.vs h3{margin-bottom:14px;font-size:1.15rem}
+.vs ol{margin-left:18px;display:grid;gap:10px;font-size:.95rem}
+.vs .old ol{color:#4b5563}
+/* заметка */
+.note{background:#fff7ed;border-left:4px solid var(--or);border-radius:0 14px 14px 0;padding:14px 18px;color:#7c2d12;font-size:.92rem;margin-top:22px}
+
+body{-webkit-user-select:text;user-select:text}
+.q{margin-bottom:22px}
+.q label,.q p{display:block;color:#374151;margin-bottom:8px;line-height:1.45}
+.q textarea{width:100%;border:1px solid #e5e0d5;border-radius:12px;padding:12px 14px;font-size:15px;font-family:inherit;resize:vertical}
+.q textarea:focus{outline:2px solid #f59e0b;border-color:transparent}
+.rb{display:flex;gap:18px;flex-wrap:wrap}
+.rb label{display:inline-flex;gap:6px;align-items:center;margin:0;cursor:pointer}
+.send{background:linear-gradient(90deg,#f59e0b,#f97316);color:#fff;border:none;border-radius:999px;padding:14px 34px;font-size:16px;font-weight:700;cursor:pointer}
+.send:disabled{opacity:.6}
+#msg{margin-top:14px;font-weight:600}
+</style>
+</head>
+<body>
+
+<div class="phero"><div class="wrap">
+<h1>Вопросы <span class="grad">по сайту</span></h1>
+<p>Юрий Александрович, здесь вопросы по содержанию нового сайта. Отвечайте на те, что удобно, — можно коротко. Пустые поля можно оставить. В конце — кнопка «Отправить». Ответы сохраняются на этом телефоне, даже если закрыть страницу.</p>
+</div></div>
+
+<section><div class="wrap">
+<form id="qf" class="card">
+<input type="hidden" name="_subject" value="Ответы директора — вопросы по сайту">
+<h2 style="margin-bottom:20px">Вопросы</h2>
+<div class="q"><label for="q1"><b>1.</b> Установка «Импульс» сейчас собрана и работает? Если нет — на каком этапе?</label>
+<textarea id="q1" name="1. Установка «Импульс» сейчас собрана и работает? Если нет — на" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q2"><b>2.</b> На golden-age.su указано сравнение с «Nelson-80». Какой это аппарат (модель Knelson?) и откуда 75 кВт?</label>
+<textarea id="q2" name="2. На golden-age.su указано сравнение с «Nelson-80». Какой это аппарат " rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q3"><b>3.</b> Цены 2026: «Импульс» опытно-промышленный 174 млн ₽, промышленный 500 млн ₽ — актуальны? Сколько стоит «Гром»?</label>
+<textarea id="q3" name="3. Цены 2026: «Импульс» опытно-промышленный 174 млн ₽, промышле" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q4"><b>4.</b> Можно ли разместить на сайте результаты лабораторных испытаний «Импульса» из вашего документа 2020 г. (вольфрам-молибденовый концентрат)? Есть ли протоколы или фото?</label>
+<textarea id="q4" name="4. Можно ли разместить на сайте результаты лабораторных испытан" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q5"><b>5.</b> Где сейчас работает «Гром» (объекты на Урале, какое сырьё)? Есть ли фото или видео для сайта?</label>
+<textarea id="q5" name="5. Где сейчас работает «Гром» (объекты на Урале, какое сырьё)? " rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q6"><b>6.</b> «Бриллиант»: были ли испытания на воде? Какая производительность?</label>
+<textarea id="q6" name="6. «Бриллиант»: были ли испытания на воде? Какая производительн" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q7"><b>7.</b> Как вы хотите продавать: лицензия, поставка установок, переработка хвостов за долю металла, совместное предприятие?</label>
+<textarea id="q7" name="7. Как вы хотите продавать: лицензия, поставка установок, перер" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q8"><b>8.</b> Патенты: есть ли сейчас, или защита на ноу-хау?</label>
+<textarea id="q8" name="8. Патенты: есть ли сейчас, или защита на ноу-хау?" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q9"><b>9.</b> Переговоры 2025–2026 (Россия, Саудовская Аравия, Африка, Ближний Восток): что можно упомянуть на сайте?</label>
+<textarea id="q9" name="9. Переговоры 2025–2026 (Россия, Саудовская Аравия, Африка, Бли" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q10"><b>10.</b> Страница «Путь компании»: верны ли годы и события (Камчатка, Урал, оценка 2016, Китай 2018, выставки 2025)?</label>
+<textarea id="q10" name="10. Страница «Путь компании»: верны ли годы и события (Камчатка," rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q11"><b>11.</b> Кто отвечает на заявки с сайта? Какие телефон и почту указать?</label>
+<textarea id="q11" name="11. Кто отвечает на заявки с сайта? Какие телефон и почту указат" rows="3" placeholder="Ваш ответ"></textarea></div>
+<div class="q"><label for="q12"><b>12.</b> Нужна ли английская версия сайта сейчас?</label>
+<textarea id="q12" name="12. Нужна ли английская версия сайта сейчас?" rows="3" placeholder="Ваш ответ"></textarea></div>
+<h2 style="margin:30px 0 8px">Что добавить на сайт</h2>
+<p class="sub" style="margin-bottom:20px">Отметьте, согласны ли вы с каждым пунктом.</p>
+<div class="q"><p><b>А.</b> Блок «Форматы работы»: пилот на сырье заказчика, поставка с шеф-монтажом, переработка хвостов за долю металла, лицензия</p>
+<div class="rb"><label><input type="radio" name="Добавить А" value="да"> да</label><label><input type="radio" name="Добавить А" value="нет"> нет</label><label><input type="radio" name="Добавить А" value="обсудить"> обсудить</label></div></div>
+<div class="q"><p><b>Б.</b> Довод «две установки на фабрику»: одна на текущие хвосты, вторая на старые отвалы</p>
+<div class="rb"><label><input type="radio" name="Добавить Б" value="да"> да</label><label><input type="radio" name="Добавить Б" value="нет"> нет</label><label><input type="radio" name="Добавить Б" value="обсудить"> обсудить</label></div></div>
+<div class="q"><p><b>В.</b> Результаты лабораторных испытаний «Импульса» как доказательство</p>
+<div class="rb"><label><input type="radio" name="Добавить В" value="да"> да</label><label><input type="radio" name="Добавить В" value="нет"> нет</label><label><input type="radio" name="Добавить В" value="обсудить"> обсудить</label></div></div>
+<div class="q"><p><b>Г.</b> Фото / видео «Грома» на объекте</p>
+<div class="rb"><label><input type="radio" name="Добавить Г" value="да"> да</label><label><input type="radio" name="Добавить Г" value="нет"> нет</label><label><input type="radio" name="Добавить Г" value="обсудить"> обсудить</label></div></div>
+<div class="q"><p><b>Д.</b> Смежные направления «Импульса»: золото из сульфидных руд без цианида, молибден, вольфрам</p>
+<div class="rb"><label><input type="radio" name="Добавить Д" value="да"> да</label><label><input type="radio" name="Добавить Д" value="нет"> нет</label><label><input type="radio" name="Добавить Д" value="обсудить"> обсудить</label></div></div>
+<div class="q"><label for="qx"><b>Замечания по сайту.</b> Что исправить, убрать или добавить (страница и блок).</label>
+<textarea id="qx" name="Замечания по сайту" rows="5" placeholder="Например: Технологии → Гром → ..."></textarea></div>
+<button class="send" type="submit">Отправить</button>
+<div id="msg"></div>
+<button type="button" id="cp" class="send" style="display:none;margin-top:12px;background:#374151">Скопировать ответы</button>
+</form>
+</div></section>
+
+<script>
+(function(){
+var f=document.getElementById("qf"),b=f.querySelector(".send"),m=document.getElementById("msg"),cp=document.getElementById("cp"),K="ga_anketa_v1";
+function save(){try{var d={};f.querySelectorAll("textarea").forEach(function(x){d[x.name]=x.value});f.querySelectorAll("input[type=radio]:checked").forEach(function(x){d[x.name]=x.value});localStorage.setItem(K,JSON.stringify(d))}catch(e){}}
+function load(){try{var d=JSON.parse(localStorage.getItem(K)||"{}");f.querySelectorAll("textarea").forEach(function(x){if(d[x.name])x.value=d[x.name]});f.querySelectorAll("input[type=radio]").forEach(function(x){if(d[x.name]===x.value)x.checked=true})}catch(e){}}
+function text(){var s=[];f.querySelectorAll("textarea").forEach(function(x){if(x.value.trim())s.push(x.name+"\n"+x.value.trim())});f.querySelectorAll("input[type=radio]:checked").forEach(function(x){s.push(x.name+": "+x.value)});return s.join("\n\n")}
+load();f.addEventListener("input",save);f.addEventListener("change",save);
+cp.addEventListener("click",function(){var t=text();if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){cp.textContent="Скопировано — вставьте в сообщение"})}else{window.prompt("Скопируйте ответы:",t)}});
+f.addEventListener("submit",function(e){
+e.preventDefault();if(!text()){m.style.color="#dc2626";m.textContent="Пока нет ни одного ответа.";return}
+b.disabled=true;m.style.color="#6b7280";m.textContent="Отправляю…";
+fetch("https://formspree.io/f/xlgqpjpo",{method:"POST",body:new FormData(f),headers:{"Accept":"application/json"}})
+.then(function(r){if(!r.ok)throw 0;m.style.color="#16a34a";m.textContent="Спасибо! Ответы отправлены.";b.textContent="Отправить ещё раз";b.disabled=false})
+.catch(function(){m.style.color="#dc2626";m.textContent="Не отправилось. Ответы сохранены на телефоне — нажмите «Отправить» ещё раз или скопируйте их и перешлите сообщением.";b.disabled=false;cp.style.display="block"});
+});
+})();
+</script>
+</body>
+</html>
